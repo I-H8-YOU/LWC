@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Hello My Input" icon-name="utility:announcement">
+    <div class="slds-box">
+      <template if:true={myInput}>
+        <p class = "slds-var-m-around_medium slds-text-body_regular">Hello {myInput}</p>
+      </template>
+      <template if:false={myInput}>
+        <p class = "slds-var-m-around_medium slds-text-body_regular">Input needed</p>
+      </template>
+      <lightning-input onchange={myFunc} value={myInput} label="Your Input"></lightning-input>
+    </div>
+  </lightning-card>
+</template>
