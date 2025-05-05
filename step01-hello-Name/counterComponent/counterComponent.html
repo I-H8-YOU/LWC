@@ -1,0 +1,12 @@
+<template>
+<lightning-card title="My Buttons" icon-name="utility:bundle_config" >
+  <div class="slds-box slds-text-align_center" >
+    <lightning-badge label={varCnt} style="color: #A8CBFF;"  class="slds-m-bottom_medium" ></lightning-badge>
+    <p class="slds-text-align_center">
+      <lightning-button label="Re-Set" title="Reset action" onclick={handleClickReset} class="slds-m-left_x-small"></lightning-button>
+      <lightning-button variant="brand" label="plus" title="Plus action" onclick={handleClickPlus} class="slds-m-left_x-small"></lightning-button>
+      <lightning-button variant="destructive" label="Sub" title="Sub action" onclick={handleClickSub} class="slds-m-left_x-small"></lightning-button>
+    </p>
+  </div>
+</lightning-card>   
+</template>
