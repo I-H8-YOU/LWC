@@ -6,7 +6,7 @@
 ## 📚 Progress
 
 ###  Step 01 – Basic Input & Reactive Data
-- `helloUser/`: Input your name and display a greeting (`Hello, [Name]!`)
+- `helloName/`: Input your name and display a greeting (`Hello, [Name]!`)
 - `counterComponent/`: Simple counter with +1 and -1 buttons
 - 🔗 Concepts: Data binding, reactive variables, event handling
 
