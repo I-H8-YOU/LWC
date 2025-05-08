@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Select Container" class="slds-m-around_medium" icon-name="utility:arrowdown">
+    <div class="slds-m-around_medium slds-box slds-text-align_center">
+        <ul class="slds-list-dotted">
+            <template for:each={products} for:item="product">
+                <li class="slds-text-align_center" key = {product.id}>
+                    <c-product-item onadd={handleAdd} product-name = {product.name} product-price = {product.price}></c-product-item>
+                </li>
+            </template>
+            </ul>
+            <template lwc:if={chk}>
+                <div class="slds-box slds-m-around_medium" style="display: inline-block;">
+                        <lightning-badge label={msg} class="slds-text-title_bold" style="color: #1B96FF;"></lightning-badge>
+                </div>
+             </template>
+    </div>
+    </lightning-card>
+</template>
