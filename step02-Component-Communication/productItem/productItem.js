@@ -2,17 +2,17 @@ import { api, LightningElement } from 'lwc';
 
 export default class ProductItem extends LightningElement {
     // @api productName;
-    __productName; //getter setter를 속성으로 접근하는것 만으로도 get set메소드 실행된다
+    _productName; //getter setter를 속성으로 접근하는것 만으로도 get set메소드 실행된다
     //__변수명으로 따로 받아준다
     @api productPrice;
 
     @api set productName(value) {
-        this.__productName = value;
+        this._productName = value;
         // this.productName = value; --> 이러면 set 무한 호출
     }
 
     get productName(){
-        return this.__productName;
+        return this._productName;
         // return this.productName;--> get 무한호출
     }
 
