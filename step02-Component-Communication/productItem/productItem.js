@@ -17,7 +17,7 @@ export default class ProductItem extends LightningElement {
     }
 
     handleClickAdd(){
-        const message = this.productName + " 추가 성공!";
+        const message = this.productName + " 추가 성공!"; //getter실행
         let evt = new CustomEvent('add', {detail : message,
             bubbles : true,
         }); //customEvent 생성 .type, .detail 로 접근
