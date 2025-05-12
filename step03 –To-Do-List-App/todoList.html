@@ -1,0 +1,25 @@
+    <template>
+        <lightning-card title="To Do List" icon-name="utility:add">
+            <div class="slds-p-around_medium">
+                <lightning-input type="text" label="Enter new item" onchange={handleInput}></lightning-input>
+                <lightning-button label="등록" onclick={handleClick}></lightning-button>
+            </div>
+            <div class="slds-box">
+                <template if:true={chk}>
+                <ul class="slds-list_dotted">
+                <template for:each={tArr} for:item="conts">
+                    <li key={conts.idx}>
+                        <c-todo-item content={conts.content}></c-todo-item>
+                    </li>
+                </template>
+                </ul>
+                </template>
+                <template if:false={chk}>
+                    <div class="slds-notify slds-notify_alert slds-theme_warning" role="alert">
+                        <span class="slds-assistive-text">Warning</span>
+                        Empty
+                    </div>
+                </template>
+            </div>
+            </lightning-card>
+        </template>
